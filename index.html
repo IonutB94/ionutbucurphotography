@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ionut Bucur Photography</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: #000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            color: #aaa;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .contact {
+            text-align: center;
+            padding: 40px;
+            background: #000;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+        }
+
+        a:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bine ai venit!</h1>
-    <p>Site-ul meu de fotografie este live 📸</p>
+
+<header>
+    <h1>Ionut Bucur Photography</h1>
+    <p>Capturing moments that matter</p>
+</header>
+
+<section class="gallery">
+    <img src="https://picsum.photos/500/700?1">
+    <img src="https://picsum.photos/500/700?2">
+    <img src="https://picsum.photos/500/700?3">
+    <img src="https://picsum.photos/500/700?4">
+    <img src="https://picsum.photos/500/700?5">
+    <img src="https://picsum.photos/500/700?6">
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>Email: ionut.cristianbucurr@gmail.com</p>
+    <p>Instagram: @ionutbucurphotography</p>
+    <br>
+    <a href="#">Trimite mesaj</a>
+</section>
+
 </body>
 </html>
