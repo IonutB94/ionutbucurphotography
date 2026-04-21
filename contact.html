@@ -16,7 +16,7 @@ body {
     color: white;
 }
 
-/* HERO IDENTIC */
+/* HERO */
 .hero {
     height: 100vh;
     background: url("fundal.jpg") no-repeat right center;
@@ -54,6 +54,37 @@ h1 {
 p {
     font-size: 20px;
     margin: 10px 0;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 120px;
+        align-items: flex-start;
+    }
+
+    .content {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .nav {
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
 }
 
 </style>
