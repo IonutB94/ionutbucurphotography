@@ -18,13 +18,14 @@ body {
 
 /* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     padding-left: 120px;
+    padding-top: 120px;
 }
 
 /* NAV */
@@ -42,13 +43,13 @@ body {
     font-size: 18px;
 }
 
-/* CONTENT 1000px */
+/* CONTENT */
 .content {
     max-width: 500px;
     width: 100%;
-    margin-top: 60px;
 }
 
+/* TITLU */
 h1 {
     font-size: 60px;
     margin-bottom: 20px;
@@ -61,28 +62,52 @@ form {
     gap: 20px;
 }
 
-/* INPUTURI FULL WIDTH */
 input, textarea {
     width: 100%;
-    padding: 18px;
+    padding: 16px;
     border-radius: 10px;
     border: none;
     font-size: 16px;
 }
 
-/* TEXTAREA */
 textarea {
-    height: 140px;
+    height: 130px;
     resize: none;
+}
+
+/* STELE */
+.stars {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 20px;
+}
+
+.stars span {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.stars label {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.stars label:hover {
+    color: #ffd700;
+}
+
+.stars input {
+    margin-right: 10px;
 }
 
 /* BUTON */
 button {
-    padding: 16px;
+    padding: 14px;
     background: #3bd16f;
     border: none;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
@@ -98,13 +123,10 @@ button:hover {
     .hero {
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 120px;
-        align-items: flex-start;
     }
 
     .content {
         max-width: 100%;
-        margin-top: 0;
     }
 
     h1 {
@@ -136,17 +158,32 @@ button:hover {
 
 <div class="hero">
 
-    <div class="content">
+<div class="content">
 
-        <h1>Reviews</h1>
+    <h1>Leave a Review</h1>
 
-        <form action="https://formspree.io/f/mlgawzqk" method="POST">
-            <input type="text" name="name" placeholder="Your name" required>
-            <textarea name="review" placeholder="Write your review..." required></textarea>
-            <button type="submit">Send Review</button>
-        </form>
+    <form action="https://formspree.io/f/mlgawzqk" method="POST">
 
-    </div>
+        <input type="text" name="name" placeholder="Your name" required>
+
+        <!-- STELE -->
+        <div class="stars">
+            <span>Rating:</span>
+
+            <label><input type="radio" name="rating" value="5" required> ★★★★★</label>
+            <label><input type="radio" name="rating" value="4"> ★★★★☆</label>
+            <label><input type="radio" name="rating" value="3"> ★★★☆☆</label>
+            <label><input type="radio" name="rating" value="2"> ★★☆☆☆</label>
+            <label><input type="radio" name="rating" value="1"> ★☆☆☆☆</label>
+        </div>
+
+        <textarea name="review" placeholder="Write your review..." required></textarea>
+
+        <button type="submit">Send Review</button>
+
+    </form>
+
+</div>
 
 </div>
 
