@@ -277,12 +277,7 @@ function changeSlide(n) {
 
 function toggleMenu() {
     var menu = document.getElementById("navLinks");
-
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
+    menu.classList.toggle("active");
 }
 
 </script>
