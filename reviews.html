@@ -12,11 +12,18 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
-    background: url("fundal.jpg") no-repeat center right;
-    background-size: cover;
-    background-attachment: fixed;
+    background: #000;
     color: white;
+}
+
+/* HERO IDENTIC */
+.hero {
+    height: 100vh;
+    background: url("fundal.jpg") no-repeat right center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 120px;
 }
 
 /* NAV */
@@ -34,17 +41,15 @@ body {
     font-size: 18px;
 }
 
-/* CONTENT STÂNGA */
-.container {
-    padding-left: 120px;
-    padding-top: 150px;
+/* CONTENT */
+.content {
     max-width: 400px;
-    min-height: 100vh;
+    margin-top: 60px;
 }
 
 h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 60px;
+    margin-bottom: 20px;
 }
 
 /* FORM */
@@ -79,15 +84,19 @@ button {
     <a href="reviews.html">Reviews</a>
 </div>
 
-<div class="container">
+<div class="hero">
 
-<h1>Reviews</h1>
+    <div class="content">
 
-<form action="https://formspree.io/f/mlgawzqk" method="POST">
-<input type="text" name="name" placeholder="Your name" required>
-<textarea name="review" placeholder="Write your review..." required></textarea>
-<button type="submit">Send Review</button>
-</form>
+        <h1>Reviews</h1>
+
+        <form action="https://formspree.io/f/mlgawzqk" method="POST">
+            <input type="text" name="name" placeholder="Your name" required>
+            <textarea name="review" placeholder="Write your review..." required></textarea>
+            <button type="submit">Send Review</button>
+        </form>
+
+    </div>
 
 </div>
 
