@@ -185,20 +185,15 @@ button {
     }
 
     .nav-links {
-    position: fixed;
-    top: 0;
-    right: -250px; /* ascuns în afara ecranului */
-    width: 250px;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    flex-direction: column;
-    padding: 80px 20px;
-    transition: 0.3s;
-}
-
-/* când e deschis */
-.nav-links.active {
+    position: absolute;
+    top: 60px;
     right: 0;
+    background: rgba(0,0,0,0.9);
+    width: 200px;
+    flex-direction: column;
+    text-align: right;
+    padding: 20px;
+    display: none;
 }
 
     .nav-links a {
