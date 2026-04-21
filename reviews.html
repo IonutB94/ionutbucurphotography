@@ -10,28 +10,27 @@
 
 <style>
 
-/* RESET */
+/* 🔥 FIX GLOBAL */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background: #000;
     color: white;
 }
 
-/* HERO FIX */
+/* HERO */
 .hero {
-    min-height: 100vh; /* 🔥 schimbare importantă */
+    min-height: 100dvh; /* 🔥 FIX FINAL */
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     padding-left: 120px;
 }
 
-/* NAV FIX */
+/* NAV */
 .nav {
     position: fixed;
     top: 30px;
@@ -66,7 +65,6 @@ form {
     gap: 20px;
 }
 
-/* INPUTURI */
 input, textarea {
     width: 100%;
     padding: 16px;
@@ -126,23 +124,16 @@ button:hover {
     background: #2bb85e;
 }
 
-/* 📱 MOBILE FIX FINAL */
+/* 📱 MOBILE */
 @media (max-width: 768px) {
 
-    html, body {
-        overflow: auto;
-    }
-
     .hero {
-        min-height: 100vh;
+        min-height: 100dvh;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 100px;
         align-items: flex-start;
-
-        background: url("fundal.jpg") no-repeat right center;
-        background-size: cover;
-        background-attachment: scroll; /* 🔥 CHEIA */
+        background-attachment: scroll;
     }
 
     .nav {
