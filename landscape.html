@@ -10,7 +10,6 @@
 
 <style>
 
-/* BODY IDENTIC CU INDEX */
 body {
     margin: 0;
     background: url("fundal.jpg") no-repeat right center;
@@ -19,16 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-/* HERO STRUCTURA IDENTICA */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 120px;
-    padding-top: 100px;
-}
-
-/* NAV FIX */
+/* 🔥 NAV FIX (asta rezolva miscarea) */
 .nav {
     position: fixed;
     top: 30px;
@@ -44,22 +34,18 @@ body {
     font-size: 18px;
 }
 
-/* CONTENT */
-.content {
-    width: 100%;
-}
-
-/* TITLU */
+/* 🔥 TITLU IDENTIC CU INDEX */
 .title {
-    font-size: 50px;
-    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin: 120px 0 40px 120px;
 }
 
 /* GALERIE */
 .gallery {
     column-count: 3;
     column-gap: 20px;
-    padding-right: 80px;
+    padding: 0 80px 50px 120px;
 }
 
 .gallery img {
@@ -116,11 +102,6 @@ body {
 /* MOBILE */
 @media (max-width: 768px) {
 
-    .hero {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     .nav {
         right: 20px;
         top: 20px;
@@ -131,13 +112,14 @@ body {
         margin-left: 15px;
     }
 
-    .gallery {
-        column-count: 1;
-        padding-right: 0;
+    .title {
+        font-size: 40px;
+        margin: 100px 20px 30px 20px;
     }
 
-    .title {
-        font-size: 35px;
+    .gallery {
+        column-count: 1;
+        padding: 0 20px 40px 20px;
     }
 
 }
@@ -154,12 +136,10 @@ body {
     <a href="reviews.html">Reviews</a>
 </div>
 
-<!-- HERO STRUCTURA -->
-<div class="hero">
-<div class="content">
-
+<!-- TITLU -->
 <div class="title">Landscape Photography</div>
 
+<!-- GALERIE -->
 <div class="gallery">
 
 <img src="images/landscapes/land1.jpg" onclick="openLightbox(0)">
@@ -174,9 +154,6 @@ body {
 <img src="images/landscapes/land10.jpg" onclick="openLightbox(9)">
 <img src="images/landscapes/land11.jpg" onclick="openLightbox(10)">
 
-</div>
-
-</div>
 </div>
 
 <!-- LIGHTBOX -->
