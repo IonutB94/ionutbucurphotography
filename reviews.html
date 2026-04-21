@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Oswald:wght@700&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
     background: url("fundal.jpg") no-repeat right center;
@@ -16,6 +17,7 @@ body {
     color: white;
 }
 
+/* NAV IDENTIC */
 .nav {
     position: absolute;
     top: 30px;
@@ -27,35 +29,41 @@ body {
     color: white;
     text-decoration: none;
     font-family: 'Playfair Display', serif;
+    font-size: 18px;
 }
 
+/* FORM STÂNGA */
 .container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 120px;
+    padding-top: 150px;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 300px;
 }
 
 input, textarea {
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     border: none;
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     background: #c58b6d;
     border: none;
     color: white;
     cursor: pointer;
 }
+
 </style>
 </head>
 
@@ -68,6 +76,8 @@ button {
 </div>
 
 <div class="container">
+
+<h1>Reviews</h1>
 
 <form action="https://formspree.io/f/mlgawzqk" method="POST">
 <input type="text" name="name" placeholder="Your name" required>
