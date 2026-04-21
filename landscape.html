@@ -12,7 +12,8 @@
 
 body {
     margin: 0;
-    background: #000;
+    background: url("fundal.jpg") no-repeat right center;
+    background-size: cover;
     color: white;
     font-family: 'Playfair Display', serif;
 }
@@ -85,7 +86,6 @@ body {
     cursor: pointer;
 }
 
-/* ARROWS */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -97,7 +97,7 @@ body {
 .prev { left: 20px; }
 .next { right: 20px; }
 
-/* 📱 MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .gallery {
@@ -138,17 +138,17 @@ body {
 <!-- GALERIE -->
 <div class="gallery">
 
-<img src="images/landscape/land1.jpg" onclick="openLightbox(0)">
-<img src="images/landscape/land2.jpg" onclick="openLightbox(1)">
-<img src="images/landscape/land3.jpg" onclick="openLightbox(2)">
-<img src="images/landscape/land4.jpg" onclick="openLightbox(3)">
-<img src="images/landscape/land5.jpg" onclick="openLightbox(4)">
-<img src="images/landscape/land6.jpg" onclick="openLightbox(5)">
-<img src="images/landscape/land7.jpg" onclick="openLightbox(6)">
-<img src="images/landscape/land8.jpg" onclick="openLightbox(7)">
-<img src="images/landscape/land9.jpg" onclick="openLightbox(8)">
-<img src="images/landscape/land10.jpg" onclick="openLightbox(9)">
-<img src="images/landscape/land11.jpg" onclick="openLightbox(10)">
+<img src="images/landscapes/land1.jpg" onclick="openLightbox(0)">
+<img src="images/landscapes/land2.jpg" onclick="openLightbox(1)">
+<img src="images/landscapes/land3.jpg" onclick="openLightbox(2)">
+<img src="images/landscapes/land4.jpg" onclick="openLightbox(3)">
+<img src="images/landscapes/land5.jpg" onclick="openLightbox(4)">
+<img src="images/landscapes/land6.jpg" onclick="openLightbox(5)">
+<img src="images/landscapes/land7.jpg" onclick="openLightbox(6)">
+<img src="images/landscapes/land8.jpg" onclick="openLightbox(7)">
+<img src="images/landscapes/land9.jpg" onclick="openLightbox(8)">
+<img src="images/landscapes/land10.jpg" onclick="openLightbox(9)">
+<img src="images/landscapes/land11.jpg" onclick="openLightbox(10)">
 
 </div>
 
@@ -163,17 +163,17 @@ body {
 <script>
 
 let images = [
-"images/landscape/land1.jpg",
-"images/landscape/land2.jpg",
-"images/landscape/land3.jpg",
-"images/landscape/land4.jpg",
-"images/landscape/land5.jpg",
-"images/landscape/land6.jpg",
-"images/landscape/land7.jpg",
-"images/landscape/land8.jpg",
-"images/landscape/land9.jpg",
-"images/landscape/land10.jpg",
-"images/landscape/land11.jpg"
+"images/landscapes/land1.jpg",
+"images/landscapes/land2.jpg",
+"images/landscapes/land3.jpg",
+"images/landscapes/land4.jpg",
+"images/landscapes/land5.jpg",
+"images/landscapes/land6.jpg",
+"images/landscapes/land7.jpg",
+"images/landscapes/land8.jpg",
+"images/landscapes/land9.jpg",
+"images/landscapes/land10.jpg",
+"images/landscapes/land11.jpg"
 ];
 
 let current = 0;
