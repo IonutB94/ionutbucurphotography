@@ -10,40 +10,56 @@
 
 <style>
 
+/* BODY IDENTIC CU INDEX */
 body {
     margin: 0;
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
     color: white;
-    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
 }
 
-/* NAV */
+/* HERO STRUCTURA IDENTICA */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 120px;
+    padding-top: 100px;
+}
+
+/* NAV FIX */
 .nav {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 80px;
+    z-index: 1000;
 }
 
 .nav a {
     margin-left: 30px;
     color: white;
     text-decoration: none;
+    font-family: 'Playfair Display', serif;
     font-size: 18px;
+}
+
+/* CONTENT */
+.content {
+    width: 100%;
 }
 
 /* TITLU */
 .title {
-    text-align: center;
-    margin-top: 100px;
     font-size: 50px;
+    margin-bottom: 40px;
 }
 
 /* GALERIE */
 .gallery {
     column-count: 3;
     column-gap: 20px;
-    padding: 50px;
+    padding-right: 80px;
 }
 
 .gallery img {
@@ -63,7 +79,6 @@ body {
     display: none;
     position: fixed;
     z-index: 999;
-    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
@@ -76,6 +91,7 @@ body {
     display: block;
     max-width: 90%;
     max-height: 80%;
+    margin-top: 60px;
 }
 
 .close {
@@ -100,9 +116,9 @@ body {
 /* MOBILE */
 @media (max-width: 768px) {
 
-    .gallery {
-        column-count: 1;
-        padding: 20px;
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .nav {
@@ -113,6 +129,11 @@ body {
     .nav a {
         font-size: 16px;
         margin-left: 15px;
+    }
+
+    .gallery {
+        column-count: 1;
+        padding-right: 0;
     }
 
     .title {
@@ -133,9 +154,12 @@ body {
     <a href="reviews.html">Reviews</a>
 </div>
 
+<!-- HERO STRUCTURA -->
+<div class="hero">
+<div class="content">
+
 <div class="title">Landscape Photography</div>
 
-<!-- GALERIE -->
 <div class="gallery">
 
 <img src="images/landscapes/land1.jpg" onclick="openLightbox(0)">
@@ -150,6 +174,9 @@ body {
 <img src="images/landscapes/land10.jpg" onclick="openLightbox(9)">
 <img src="images/landscapes/land11.jpg" onclick="openLightbox(10)">
 
+</div>
+
+</div>
 </div>
 
 <!-- LIGHTBOX -->
