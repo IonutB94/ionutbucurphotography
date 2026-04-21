@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Events Photography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Oswald:wght@700&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+
+<style>
+
+/* 🔥 FUNDAL FIX REAL */
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("fundal.jpg") no-repeat right center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* BODY CURAT */
+body {
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* NAV IDENTIC */
+.nav {
+    position: fixed;
+    top: 30px;
+    right: 80px;
+    z-index: 1000;
+}
+
+.nav a {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+/* TITLU */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin: 120px 0 40px 120px;
+}
+
+/* GALERIE */
+.gallery {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 0 80px 50px 120px;
+}
+
+.gallery img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+}
+
+.lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 60px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .nav {
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin: 100px 20px 30px 20px;
+    }
+
+    .gallery {
+        column-count: 1;
+        padding: 0 20px 40px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 FUNDAL -->
+<div class="bg"></div>
+
+<!-- NAV -->
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="reviews.html">Reviews</a>
+</div>
+
+<!-- TITLU -->
+<div class="title">Events Photography</div>
+
+<!-- GALERIE -->
+<div class="gallery">
+
+<img src="images/events/event1.jpg" onclick="openLightbox(0)">
+<img src="images/events/event2.jpg" onclick="openLightbox(1)">
+<img src="images/events/event3.jpg" onclick="openLightbox(2)">
+<img src="images/events/event4.jpg" onclick="openLightbox(3)">
+<img src="images/events/event5.jpg" onclick="openLightbox(4)">
+<img src="images/events/event6.jpg" onclick="openLightbox(5)">
+<img src="images/events/event7.jpg" onclick="openLightbox(6)">
+<img src="images/events/event8.jpg" onclick="openLightbox(7)">
+<img src="images/events/event9.jpg" onclick="openLightbox(8)">
+<img src="images/events/event10.jpg" onclick="openLightbox(9)">
+<img src="images/events/event11.jpg" onclick="openLightbox(10)">
+<img src="images/events/event12.jpg" onclick="openLightbox(11)">
+<img src="images/events/event13.jpg" onclick="openLightbox(12)">
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="lightbox-img">
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+<script>
+
+let images = [
+"images/events/event1.jpg",
+"images/events/event2.jpg",
+"images/events/event3.jpg",
+"images/events/event4.jpg",
+"images/events/event5.jpg",
+"images/events/event6.jpg",
+"images/events/event7.jpg",
+"images/events/event8.jpg",
+"images/events/event9.jpg",
+"images/events/event10.jpg",
+"images/events/event11.jpg",
+"images/events/event12.jpg",
+"images/events/event13.jpg"
+];
+
+let current = 0;
+
+function openLightbox(index) {
+    current = index;
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = images[current];
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(n) {
+    current += n;
+
+    if (current < 0) current = images.length - 1;
+    if (current >= images.length) current = 0;
+
+    document.getElementById("lightbox-img").src = images[current];
+}
+
+</script>
+
+</body>
+</html>
