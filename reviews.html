@@ -10,22 +10,24 @@
 
 <style>
 
-body {
+/* RESET SCROLL BUG */
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* 🔥 scoate scroll-ul */
     background: #000;
     color: white;
 }
 
 /* HERO */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 120px;
-    padding-top: 120px;
 }
 
 /* NAV */
@@ -62,6 +64,7 @@ form {
     gap: 20px;
 }
 
+/* INPUTURI */
 input, textarea {
     width: 100%;
     padding: 16px;
@@ -70,17 +73,18 @@ input, textarea {
     font-size: 16px;
 }
 
+/* TEXTAREA */
 textarea {
     height: 130px;
     resize: none;
 }
 
-/* STELE */
+/* ⭐ STELE CLEAN */
 .stars {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .stars span {
@@ -88,6 +92,12 @@ textarea {
     margin-bottom: 5px;
 }
 
+/* 🔥 ASCUNDEM PUNCTELE */
+.stars input {
+    display: none;
+}
+
+/* STYLE STELE */
 .stars label {
     cursor: pointer;
     transition: 0.2s;
@@ -95,10 +105,7 @@ textarea {
 
 .stars label:hover {
     color: #ffd700;
-}
-
-.stars input {
-    margin-right: 10px;
+    transform: scale(1.1);
 }
 
 /* BUTON */
@@ -120,9 +127,15 @@ button:hover {
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 
+    html, body {
+        overflow: auto; /* 🔥 pe mobil permitem scroll */
+    }
+
     .hero {
         padding-left: 20px;
         padding-right: 20px;
+        align-items: flex-start;
+        padding-top: 100px;
     }
 
     .content {
@@ -166,7 +179,7 @@ button:hover {
 
         <input type="text" name="name" placeholder="Your name" required>
 
-        <!-- STELE -->
+        <!-- ⭐ STELE -->
         <div class="stars">
             <span>Rating:</span>
 
