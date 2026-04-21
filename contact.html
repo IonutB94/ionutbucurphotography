@@ -10,20 +10,18 @@
 
 <style>
 
-html, body {
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-    background: #000;
+    background: url("fundal.jpg") no-repeat right center;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
+    overflow-x: hidden;
 }
 
 /* HERO */
 .hero {
-    min-height: 100dvh; /* 🔥 FIX FINAL */
-    background: url("fundal.jpg") no-repeat right center;
-    background-size: cover;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     padding-left: 120px;
@@ -42,7 +40,6 @@ html, body {
     color: white;
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
 }
 
 /* CONTENT */
@@ -56,19 +53,18 @@ h1 {
 
 p {
     font-size: 20px;
-    margin: 10px 0;
 }
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 
-    .hero {
-        min-height: 100dvh;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 100px;
-        align-items: flex-start;
+    body {
         background-attachment: scroll;
+    }
+
+    .hero {
+        padding: 100px 20px 0 20px;
+        align-items: flex-start;
     }
 
     .nav {
@@ -85,10 +81,6 @@ p {
         font-size: 40px;
     }
 
-    p {
-        font-size: 18px;
-    }
-
 }
 
 </style>
@@ -97,19 +89,19 @@ p {
 <body>
 
 <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
-    <a href="reviews.html">Reviews</a>
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+<a href="reviews.html">Reviews</a>
 </div>
 
 <div class="hero">
 
-    <div class="content">
-        <h1>Contact</h1>
-        <p>📞 Telefon: 0753 027 418</p>
-        <p>💬 WhatsApp: 0753 027 418</p>
-        <p>📧 ionut.cristianbucurr@gmail.com</p>
-    </div>
+<div class="content">
+<h1>Contact</h1>
+<p>📞 Telefon: 0753 027 418</p>
+<p>💬 WhatsApp: 0753 027 418</p>
+<p>📧 ionut.cristianbucurr@gmail.com</p>
+</div>
 
 </div>
 
