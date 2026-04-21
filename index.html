@@ -10,7 +10,7 @@
 
 <style>
 
-/* 🔥 FUNDAL GLOBAL */
+/* BODY */
 body {
     margin: 0;
     background: url("fundal.jpg") no-repeat right center;
@@ -19,16 +19,9 @@ body {
     overflow-x: hidden;
 }
 
-/* 🔥 FIX MOBIL */
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-    }
-}
-
-/* HERO (FARA BACKGROUND) */
+/* HERO FIX */
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* 🔥 FIX IMPORTANT */
     display: flex;
     align-items: center;
     padding-left: 120px;
