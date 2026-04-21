@@ -12,16 +12,25 @@
 
 body {
     margin: 0;
-    background: url("fundal.jpg") no-repeat right center;
-    background-size: cover;
-    background-attachment: fixed;
     color: white;
     overflow-x: hidden;
 }
 
+/* 🔥 BACKGROUND FIX REAL */
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("fundal.jpg") no-repeat right center;
+    background-size: cover;
+    z-index: -1;
+}
+
 /* HERO */
 .hero {
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding-left: 120px;
@@ -58,10 +67,6 @@ p {
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 
-    body {
-        background-attachment: scroll;
-    }
-
     .hero {
         padding: 100px 20px 0 20px;
         align-items: flex-start;
@@ -88,6 +93,8 @@ p {
 
 <body>
 
+<div class="bg"></div>
+
 <div class="nav">
 <a href="index.html">Home</a>
 <a href="contact.html">Contact</a>
@@ -98,9 +105,9 @@ p {
 
 <div class="content">
 <h1>Contact</h1>
-<p>📞 Telefon: 0753 027 418</p>
-<p>💬 WhatsApp: 0753 027 418</p>
-<p>📧 ionut.cristianbucurr@gmail.com</p>
+<p>📞 07XXXXXXXX</p>
+<p>💬 WhatsApp: 07XXXXXXXX</p>
+<p>📧 emailul_tau@gmail.com</p>
 </div>
 
 </div>
