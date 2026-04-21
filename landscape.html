@@ -20,6 +20,8 @@
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
     z-index: -1;
+    transform: translateZ(0); /* 🔥 FIX */
+    will-change: transform;   /* 🔥 FIX */
 }
 
 /* BODY CURAT */
@@ -28,14 +30,15 @@ body {
     color: white;
     overflow-x: hidden;
     overflow-y: scroll;
+    backface-visibility: hidden; /* 🔥 FIX */
 }
 
 /* NAV IDENTIC */
 .nav {
-    position: absolute;
-    top: 30px;
-    right: 80px;
-    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 80px;
+    transform: translateZ(0); /* 🔥 FIX */
 }
 
 .nav a {
