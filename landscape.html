@@ -20,16 +20,16 @@ body {
 
 /* 🔥 FUNDAL FIX REAL */
 .bg {
+    .bg-img {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("fundal.jpg") no-repeat right center;
-    background-size: cover;
+    object-fit: cover;
+    object-position: right center;
     z-index: -1;
-    transform: translateZ(0); /* 🔥 FIX */
-    will-change: transform;   /* 🔥 FIX */
+    pointer-events: none;
 }
 
 /* BODY CURAT */
