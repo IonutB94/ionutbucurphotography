@@ -16,21 +16,23 @@ body {
     color: white;
 }
 
-/* HERO */
+/* HERO FIX */
 .hero {
     height: 100vh;
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     padding-left: 120px;
 }
 
-/* NAV */
+/* NAV FIX */
 .nav {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 80px;
+    z-index: 1000;
 }
 
 .nav a {
@@ -44,7 +46,6 @@ body {
 /* CONTENT */
 .content {
     max-width: 600px;
-    margin-top: 60px;
 }
 
 h1 {
@@ -62,17 +63,9 @@ p {
     .hero {
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 120px;
+        padding-top: 100px;
         align-items: flex-start;
-    }
-
-    .content {
-        max-width: 100%;
-        margin-top: 0;
-    }
-
-    h1 {
-        font-size: 40px;
+        background-attachment: scroll;
     }
 
     .nav {
@@ -83,6 +76,10 @@ p {
     .nav a {
         font-size: 16px;
         margin-left: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
     }
 
 }
@@ -102,9 +99,9 @@ p {
 
     <div class="content">
         <h1>Contact</h1>
-        <p>📞 0753 027 418</p>
-        <p>💬 WhatsApp: 0753 027 418</p>
-        <p>📧 ionut.cristianbucurr@gmail.com</p>
+        <p>📞 07XXXXXXXX</p>
+        <p>💬 WhatsApp: 07XXXXXXXX</p>
+        <p>📧 emailul_tau@gmail.com</p>
     </div>
 
 </div>
