@@ -29,7 +29,7 @@ body {
 
 /* CONTAINER */
 .content {
-    max-width: 700px;
+    max-width: 600px;
     margin-top: 60px;
 }
 
@@ -48,7 +48,7 @@ body {
     font-size: 18px;
 }
 
-/* TITLU */
+/* TITLU WOW */
 .title {
     font-family: 'Playfair Display', serif;
     font-size: 60px;
@@ -57,15 +57,17 @@ body {
     background: linear-gradient(90deg, #c58b6d, #f5d0b5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(197,139,109,0.3);
 }
 
-/* SUBTITLU */
+/* PHOTOGRAPHY WOW */
 .subtitle {
     font-family: 'Oswald', sans-serif;
     font-size: 90px;
     font-weight: 700;
     letter-spacing: 6px;
     line-height: 1;
+    text-shadow: 0 0 25px rgba(255,255,255,0.15);
 }
 
 /* LINE */
@@ -76,19 +78,20 @@ body {
     margin: 20px 0;
 }
 
-/* TAGLINE */
+/* TAGLINE WOW */
 .tagline {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     letter-spacing: 4px;
     font-size: 20px;
     color: #ddd;
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
 
 /* CATEGORIES */
 .categories {
     display: flex;
-    gap: 40px;
+    gap: 35px;
     margin-top: 50px;
 }
 
@@ -98,11 +101,10 @@ body {
     width: 350px;
     height: 250px;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
-/* IMAGINE */
 .card img {
     width: 100%;
     height: 100%;
@@ -110,25 +112,22 @@ body {
     transition: 0.4s;
 }
 
-/* OVERLAY JOS */
+/* OVERLAY */
 .overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
     opacity: 0;
     transition: 0.4s;
 }
 
 /* HOVER */
 .card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .card:hover .overlay {
@@ -140,13 +139,16 @@ body {
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
     <a href="#">Home</a>
     <a href="#">Contact</a>
     <a href="#">Reviews</a>
 </div>
 
+<!-- HERO -->
 <div class="hero">
+
     <div class="content">
 
         <div class="title">Ionut Bucur</div>
@@ -160,22 +162,23 @@ body {
 
             <div class="card">
                 <img src="peisaj.jpg">
-                <div class="overlay">Landscape Photography</div>
+                <div class="overlay">FOTOGRAFIE DE PEISAJ</div>
             </div>
 
             <div class="card">
                 <img src="evenimente.jpg">
-                <div class="overlay">Events Photography</div>
+                <div class="overlay">EVENIMENTE</div>
             </div>
 
             <div class="card">
                 <img src="drona.jpg">
-                <div class="overlay">Drone Footage</div>
+                <div class="overlay">DRONĂ</div>
             </div>
 
         </div>
 
     </div>
+
 </div>
 
 </body>
