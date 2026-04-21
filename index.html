@@ -1,92 +1,165 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ionut Bucur Photography</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: #000;
-        }
+<title>Ionut Bucur Photography</title>
 
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
+<!-- FONTURI -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
-        header p {
-            color: #aaa;
-        }
+<style>
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-            padding: 20px;
-        }
+body {
+    margin: 0;
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
-        .gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: 0.3s;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("fundal.jpg") no-repeat center right;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
+/* NAV */
+.nav {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
 
-        .contact {
-            text-align: center;
-            padding: 40px;
-            background: #000;
-        }
+.nav a {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
 
-        a {
-            color: #fff;
-            text-decoration: none;
-            border: 1px solid #fff;
-            padding: 10px 20px;
-        }
+/* TITLU */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #c58b6d;
+}
 
-        a:hover {
-            background: #fff;
-            color: #000;
-        }
-    </style>
+.subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+/* LINE */
+.line {
+    width: 60px;
+    height: 2px;
+    background: #c58b6d;
+    margin: 20px 0;
+}
+
+/* TEXT */
+.tagline {
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* CATEGORIES */
+.categories {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARD */
+.card {
+    position: relative;
+    width: 170px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    font-size: 12px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* HOVER */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Ionut Bucur Photography</h1>
-    <p>Capturing moments that matter</p>
-</header>
+<!-- NAV -->
+<div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Contact</a>
+    <a href="#">Reviews</a>
+</div>
 
-<section class="gallery">
-    <img src="https://picsum.photos/500/700?1">
-    <img src="https://picsum.photos/500/700?2">
-    <img src="https://picsum.photos/500/700?3">
-    <img src="https://picsum.photos/500/700?4">
-    <img src="https://picsum.photos/500/700?5">
-    <img src="https://picsum.photos/500/700?6">
-</section>
+<!-- HERO -->
+<div class="hero">
 
-<section class="contact">
-    <h2>Contact</h2>
-    <p>Email: ionut.cristianbucurr@gmail.com</p>
-    <p>Instagram: @ionutbucurphotography</p>
-    <br>
-    <a href="#">Trimite mesaj</a>
-</section>
+    <div class="title">Ionut Bucur</div>
+    <div class="subtitle">PHOTOGRAPHY</div>
+
+    <div class="line"></div>
+
+    <div class="tagline">CAPTURING MOMENTS THAT MATTER</div>
+
+    <!-- CATEGORIES -->
+    <div class="categories">
+
+        <div class="card">
+            <img src="peisaj.jpg">
+            <div class="overlay">FOTOGRAFIE DE PEISAJ</div>
+        </div>
+
+        <div class="card">
+            <img src="evenimente.jpg">
+            <div class="overlay">EVENIMENTE</div>
+        </div>
+
+        <div class="card">
+            <img src="drona.jpg">
+            <div class="overlay">DRONĂ</div>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
