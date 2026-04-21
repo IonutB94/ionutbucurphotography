@@ -12,12 +12,14 @@
 
 body {
     margin: 0;
-    background: url("fundal.jpg") no-repeat right center;
+    min-height: 100vh;
+    background: url("fundal.jpg") no-repeat center right;
     background-size: cover;
+    background-attachment: fixed;
     color: white;
 }
 
-/* NAV IDENTIC */
+/* NAV */
 .nav {
     position: absolute;
     top: 30px;
@@ -32,11 +34,12 @@ body {
     font-size: 18px;
 }
 
-/* FORM STÂNGA */
+/* CONTENT STÂNGA */
 .container {
     padding-left: 120px;
     padding-top: 150px;
     max-width: 400px;
+    min-height: 100vh;
 }
 
 h1 {
@@ -44,6 +47,7 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* FORM */
 form {
     display: flex;
     flex-direction: column;
