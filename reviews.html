@@ -10,6 +10,7 @@
 
 <style>
 
+/* RESET */
 html, body {
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ html, body {
     color: white;
 }
 
-/* HERO FIX */
+/* HERO */
 .hero {
     height: 100vh;
     background: url("fundal.jpg") no-repeat right center;
@@ -30,7 +31,7 @@ html, body {
     padding-left: 120px;
 }
 
-/* NAV FIX */
+/* NAV */
 .nav {
     position: fixed;
     top: 30px;
@@ -65,6 +66,7 @@ form {
     gap: 20px;
 }
 
+/* INPUTURI DESKTOP */
 input, textarea {
     width: 100%;
     padding: 16px;
@@ -124,7 +126,7 @@ button:hover {
     background: #2bb85e;
 }
 
-/* 📱 MOBILE */
+/* 📱 MOBILE FIX REAL */
 @media (max-width: 768px) {
 
     html, body {
@@ -153,9 +155,14 @@ button:hover {
         font-size: 40px;
     }
 
+    /* 🔥 AICI E FIXUL FINAL */
+    form {
+        align-items: flex-start;
+    }
+
     input, textarea {
-        width: 85%;
-        max-width: 320px;
+        width: 100%;
+        max-width: 260px; /* 🔥 se oprește fix unde trebuie */
     }
 
     button {
