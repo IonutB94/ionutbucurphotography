@@ -266,6 +266,16 @@ function changeSlide(n) {
     document.getElementById("lightbox-img").src = images[current];
 }
 
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
 </script>
 
 </body>
