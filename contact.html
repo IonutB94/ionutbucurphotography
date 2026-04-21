@@ -18,7 +18,7 @@ body {
 
 /* HERO FIX */
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* 🔥 important */
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
     background-attachment: fixed;
@@ -57,15 +57,19 @@ p {
     margin: 10px 0;
 }
 
-/* 📱 MOBILE */
+/* 📱 MOBILE FIX FINAL */
 @media (max-width: 768px) {
 
     .hero {
+        min-height: 100vh;
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 100px;
         align-items: flex-start;
-        background-attachment: scroll;
+
+        background: url("fundal.jpg") no-repeat right center;
+        background-size: cover;
+        background-attachment: scroll; /* 🔥 cheia */
     }
 
     .nav {
@@ -80,6 +84,10 @@ p {
 
     h1 {
         font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
     }
 
 }
