@@ -10,19 +10,28 @@
 
 <style>
 
-/* 🔥 FUNDAL MUTAT PE BODY */
+/* RESET */
 body {
     margin: 0;
-    background: url("fundal.jpg") no-repeat right center;
-    background-size: cover;
-    background-attachment: fixed;
     color: white;
     overflow-x: hidden;
 }
 
-/* HERO = DOAR CONTAINER */
+/* 🔥 BACKGROUND FIX REAL */
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("fundal.jpg") no-repeat right center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* HERO */
 .hero {
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding-left: 120px;
@@ -115,10 +124,6 @@ button {
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 
-    body {
-        background-attachment: scroll; /* 🔥 FIX FINAL */
-    }
-
     .hero {
         padding: 100px 20px 0 20px;
         align-items: flex-start;
@@ -152,6 +157,8 @@ button {
 </head>
 
 <body>
+
+<div class="bg"></div>
 
 <div class="nav">
     <a href="index.html">Home</a>
