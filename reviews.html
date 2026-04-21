@@ -10,12 +10,12 @@
 
 <style>
 
-/* RESET SCROLL BUG */
+/* RESET */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* 🔥 scoate scroll-ul */
+    overflow: hidden;
     background: #000;
     color: white;
 }
@@ -64,7 +64,6 @@ form {
     gap: 20px;
 }
 
-/* INPUTURI */
 input, textarea {
     width: 100%;
     padding: 16px;
@@ -73,39 +72,38 @@ input, textarea {
     font-size: 16px;
 }
 
-/* TEXTAREA */
 textarea {
     height: 130px;
     resize: none;
 }
 
-/* ⭐ STELE CLEAN */
+/* ⭐ STELE INTERACTIVE */
 .stars {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 22px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    font-size: 32px;
 }
 
-.stars span {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* 🔥 ASCUNDEM PUNCTELE */
 .stars input {
     display: none;
 }
 
-/* STYLE STELE */
 .stars label {
+    color: #444;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.stars label:hover {
+/* hover */
+.stars label:hover,
+.stars label:hover ~ label {
     color: #ffd700;
-    transform: scale(1.1);
+}
+
+/* selectat */
+.stars input:checked ~ label {
+    color: #ffd700;
 }
 
 /* BUTON */
@@ -128,7 +126,7 @@ button:hover {
 @media (max-width: 768px) {
 
     html, body {
-        overflow: auto; /* 🔥 pe mobil permitem scroll */
+        overflow: auto;
     }
 
     .hero {
@@ -181,13 +179,20 @@ button:hover {
 
         <!-- ⭐ STELE -->
         <div class="stars">
-            <span>Rating:</span>
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5">★</label>
 
-            <label><input type="radio" name="rating" value="5" required> ★★★★★</label>
-            <label><input type="radio" name="rating" value="4"> ★★★★☆</label>
-            <label><input type="radio" name="rating" value="3"> ★★★☆☆</label>
-            <label><input type="radio" name="rating" value="2"> ★★☆☆☆</label>
-            <label><input type="radio" name="rating" value="1"> ★☆☆☆☆</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★</label>
+
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★</label>
+
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★</label>
+
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">★</label>
         </div>
 
         <textarea name="review" placeholder="Write your review..." required></textarea>
