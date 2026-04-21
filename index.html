@@ -6,7 +6,7 @@
 
 <title>Ionut Bucur Photography</title>
 
-<!-- FONTURI -->
+<!-- FONTURI (FOARTE IMPORTANT) -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
 <style>
@@ -23,9 +23,13 @@ body {
     background: url("fundal.jpg") no-repeat right center;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
+    align-items: center;
+    padding-left: 120px;
+}
+
+/* CONTAINER TEXT */
+.content {
+    max-width: 600px;
 }
 
 /* NAV */
@@ -76,15 +80,15 @@ body {
 /* CATEGORIES */
 .categories {
     display: flex;
-    gap: 30px;
-    margin-top: 60px;
+    gap: 25px;
+    margin-top: 50px;
 }
 
 /* CARD */
 .card {
     position: relative;
-    width: 200px;
-    height: 130px;
+    width: 180px;
+    height: 120px;
     overflow: hidden;
     border-radius: 10px;
     cursor: pointer;
@@ -134,29 +138,32 @@ body {
 <!-- HERO -->
 <div class="hero">
 
-    <div class="title">Ionut Bucur</div>
-    <div class="subtitle">PHOTOGRAPHY</div>
+    <div class="content">
 
-    <div class="line"></div>
+        <div class="title">Ionut Bucur</div>
+        <div class="subtitle">PHOTOGRAPHY</div>
 
-    <div class="tagline">CAPTURING MOMENTS THAT MATTER</div>
+        <div class="line"></div>
 
-    <!-- CATEGORIES -->
-    <div class="categories">
+        <div class="tagline">CAPTURING MOMENTS THAT MATTER</div>
 
-        <div class="card">
-            <img src="peisaj.jpg">
-            <div class="overlay">FOTOGRAFIE DE PEISAJ</div>
-        </div>
+        <div class="categories">
 
-        <div class="card">
-            <img src="evenimente.jpg">
-            <div class="overlay">EVENIMENTE</div>
-        </div>
+            <div class="card">
+                <img src="peisaj.jpg">
+                <div class="overlay">FOTOGRAFIE DE PEISAJ</div>
+            </div>
 
-        <div class="card">
-            <img src="drona.jpg">
-            <div class="overlay">DRONĂ</div>
+            <div class="card">
+                <img src="evenimente.jpg">
+                <div class="overlay">EVENIMENTE</div>
+            </div>
+
+            <div class="card">
+                <img src="drona.jpg">
+                <div class="overlay">DRONĂ</div>
+            </div>
+
         </div>
 
     </div>
