@@ -10,7 +10,6 @@
 
 <style>
 
-/* BODY */
 body {
     margin: 0;
     background: url("fundal.jpg") no-repeat right center;
@@ -19,9 +18,9 @@ body {
     overflow-x: hidden;
 }
 
-/* HERO FIX */
+/* HERO */
 .hero {
-    min-height: 100vh; /* 🔥 FIX IMPORTANT */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding-left: 120px;
@@ -105,7 +104,6 @@ body {
     transition: 0.4s;
 }
 
-/* OVERLAY */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -188,19 +186,22 @@ body {
 
 <div class="categories">
 
-<div class="card">
-<img src="peisaj.jpg">
-<div class="overlay">Landscape Photography</div>
+<!-- LANDSCAPE -->
+<div class="card" onclick="location.href='landscape.html'">
+    <img src="peisaj.jpg">
+    <div class="overlay">Landscape Photography</div>
 </div>
 
-<div class="card">
-<img src="evenimente.jpg">
-<div class="overlay">Events Photography</div>
+<!-- EVENTS -->
+<div class="card" onclick="location.href='events.html'">
+    <img src="evenimente.jpg">
+    <div class="overlay">Events Photography</div>
 </div>
 
-<div class="card">
-<img src="drona.jpg">
-<div class="overlay">Drone Footage</div>
+<!-- DRONE -->
+<div class="card" onclick="location.href='drone.html'">
+    <img src="drona.jpg">
+    <div class="overlay">Drone Footage</div>
 </div>
 
 </div>
