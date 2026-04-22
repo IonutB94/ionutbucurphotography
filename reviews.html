@@ -57,7 +57,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: flex-start;
-    padding: 120px 0 60px 120px;
+    padding: 80px 0 60px 120px;
 }
 
 /* CONTENT */
@@ -71,12 +71,12 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* FORM (mai compact) */
+/* FORM */
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 input, textarea {
@@ -128,7 +128,7 @@ button {
     margin: 10px auto;
 }
 
-/* 🔥 REVIEW CARDS */
+/* 🔥 REVIEW CARDS (LIGHT GLASS) */
 .reviews-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -136,15 +136,17 @@ button {
 }
 
 .review {
-    background: rgba(0,0,0,0.6);
+    background: rgba(255,255,255,0.08);
     padding: 20px;
     border-radius: 12px;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
     transition: 0.3s;
 }
 
 .review:hover {
     transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
 }
 
 .review .stars {
@@ -168,7 +170,7 @@ button {
 @media (max-width: 768px) {
 
     .hero {
-        padding: 100px 20px;
+        padding: 80px 20px;
     }
 
     .nav {
@@ -245,9 +247,9 @@ button {
 
 <h1>Lasă un review</h1>
 
-<form action="https://formspree.io/f/mlgawzqk" method="POST">
+<form onsubmit="addReview(event)" action="https://formspree.io/f/mlgawzqk" method="POST">
 
-<input type="text" name="name" placeholder="Numele tău" required>
+<input type="text" id="name" name="name" placeholder="Numele tău" required>
 
 <div class="stars">
 <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
@@ -257,7 +259,7 @@ button {
 <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
 </div>
 
-<textarea name="review" placeholder="Scrie review-ul tău..." required></textarea>
+<textarea id="reviewText" name="review" placeholder="Scrie review-ul tău..." required></textarea>
 
 <button type="submit">Trimite review</button>
 
@@ -288,10 +290,40 @@ button {
 </div>
 
 <script>
+
 function toggleMenu() {
     var menu = document.getElementById("navLinks");
     menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
+
+/* 🔥 ADD REVIEW INSTANT */
+function addReview(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const text = document.getElementById("reviewText").value;
+    const rating = document.querySelector('input[name="rating"]:checked');
+
+    if (!rating) return;
+
+    const stars = "★★★★★".slice(0, rating.value);
+
+    const container = document.querySelector(".reviews-container");
+
+    const newReview = document.createElement("div");
+    newReview.classList.add("review");
+
+    newReview.innerHTML = `
+        <div class="stars">${stars}</div>
+        <p>„${text}”</p>
+        <span>— ${name}</span>
+    `;
+
+    container.prepend(newReview);
+
+    event.target.submit();
+}
+
 </script>
 
 </body>
