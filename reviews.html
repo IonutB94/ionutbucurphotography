@@ -19,16 +19,12 @@ html {
 
 body {
     overflow-y: scroll;
-}
-
-/* RESET */
-body {
     margin: 0;
     color: white;
     overflow-x: hidden;
 }
 
-/* 🔥 BACKGROUND FIX REAL */
+/* BACKGROUND */
 .bg {
     position: fixed;
     top: 0;
@@ -40,17 +36,9 @@ body {
     z-index: -1;
 }
 
-/* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-left: 120px;
-}
-
 /* NAV */
 .nav {
-    position: fixed !important;
+    position: fixed;
     top: 30px;
     right: 80px;
     z-index: 9999;
@@ -64,9 +52,17 @@ body {
     font-size: 18px;
 }
 
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding: 120px 0 60px 120px;
+}
+
 /* CONTENT */
 .content {
-    max-width: 500px;
+    max-width: 600px;
 }
 
 /* TITLU */
@@ -132,12 +128,51 @@ button {
     margin: 10px auto;
 }
 
-/* 📱 MOBILE */
+/* 🔥 REVIEWS */
+.reviews-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.review {
+    background: rgba(0,0,0,0.6);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.6s ease;
+}
+
+.review.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.review .stars {
+    font-size: 20px;
+    color: #f5d06f;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.review span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
     .hero {
-        padding: 100px 20px 0 20px;
-        align-items: flex-start;
+        padding: 100px 20px;
     }
 
     .nav {
@@ -155,7 +190,7 @@ button {
     }
 
     input, textarea {
-        max-width: 260px;
+        max-width: 100%;
     }
 
     button {
@@ -171,12 +206,10 @@ button {
     cursor: pointer;
 }
 
-/* NAV LINKS */
 .nav-links {
     display: flex;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
 
     .menu-toggle {
@@ -185,16 +218,16 @@ button {
     }
 
     .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgba(0,0,0,0.9);
-    width: 200px;
-    flex-direction: column;
-    text-align: right;
-    padding: 20px;
-    display: none;
-}
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 200px;
+        flex-direction: column;
+        text-align: right;
+        padding: 20px;
+        display: none;
+    }
 
     .nav-links a {
         display: block;
@@ -211,21 +244,16 @@ button {
 <div class="bg"></div>
 
 <div class="nav">
-
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="contact.html">Contact</a>
         <a href="reviews.html">Reviews</a>
     </div>
-
 </div>
 
 <div class="hero">
-
 <div class="content">
 
 <h1>Leave a Review</h1>
@@ -248,20 +276,49 @@ button {
 
 </form>
 
+<!-- 🔥 REVIEW-URI -->
+<div class="reviews-container">
+
+<div class="review fade-in">
+    <div class="stars">★★★★★</div>
+    <p>
+    "Ionut ne-a fost alături la doua dintre cele mai importante evenimente din viata noastră, ziua in care am spus da si botezul fiicei noastre.
+    Datorita lui avem amintiri minunate si profesionale.
+    Il recomand cu drag!"
+    </p>
+    <span>- Catalina B.</span>
 </div>
 
+<div class="review fade-in">
+    <div class="stars">★★★★★</div>
+    <p>"Recomand"</p>
+    <span>- Teodora L.</span>
+</div>
+
+</div>
+
+</div>
 </div>
 
 <script>
+
 function toggleMenu() {
     var menu = document.getElementById("navLinks");
-
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
+
+/* 🔥 ANIMATIE */
+const reviews = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    reviews.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+            el.classList.add('visible');
+        }
+    });
+});
+
 </script>
 
 </body>
