@@ -119,6 +119,22 @@ body {
     z-index: 2;
 }
 
+/* DESCRIERE */
+.description {
+    max-width: 700px;
+    margin: 40px auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+}
+
+.description a {
+    color: white;
+    text-decoration: underline;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -165,16 +181,16 @@ body {
     }
 
     .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgba(0,0,0,0.9);
-    width: 200px;
-    flex-direction: column;
-    text-align: right;
-    padding: 20px;
-    display: none;
-}
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 200px;
+        flex-direction: column;
+        text-align: right;
+        padding: 20px;
+        display: none;
+    }
 
     .nav-links a {
         display: block;
@@ -212,12 +228,29 @@ body {
 <!-- VIDEO -->
 <div class="video-container">
 
-    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=i9PctIHzzic&t=69s', '_blank')">
+    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=i9PctIHzzic', '_blank')">
         <img src="cicanesti_preview.jpg">
         <div class="play-btn">▶</div>
-        <div class="video-text">Watch on YouTube</div>
+        <div class="video-text">Cicănești • All Seasons</div>
     </div>
 
+</div>
+
+<!-- DESCRIERE -->
+<div class="description">
+    <p>
+        Discover Cicănești through all seasons in this cinematic aerial journey.
+    </p>
+
+    <p>
+        A peaceful corner of Romania where nature, tradition, and time flow differently.
+    </p>
+
+    <p>
+        <a href="https://www.youtube.com/watch?v=i9PctIHzzic" target="_blank">
+            Watch full video on YouTube
+        </a>
+    </p>
 </div>
 
 <script>
@@ -230,7 +263,6 @@ function toggleMenu() {
         menu.style.display = "block";
     }
 }
-</script>
 </script>
 
 </body>
