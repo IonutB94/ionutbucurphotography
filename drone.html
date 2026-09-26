@@ -135,6 +135,21 @@ body {
     text-decoration: underline;
 }
 
+/* VIDEOURI DESKTOP */
+.videos-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.video-item {
+    width: 520px;
+}
+
+.video-item .video-container {
+    margin-top: 40px;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -156,6 +171,16 @@ body {
     .video-card {
         width: 90%;
         height: 220px;
+    }
+
+    .videos-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .video-item {
+        width: 100%;
     }
 
 }
@@ -225,60 +250,70 @@ body {
 <!-- TITLU -->
 <div class="title">Drone Footage</div>
 
-<!-- VIDEO -->
-<div class="video-container">
+<!-- VIDEOURI -->
+<div class="videos-wrapper">
 
-    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=Re9wwhwZrpI', '_blank')">
-        <img src="cicanesti.jpg">
-        <div class="play-btn">▶</div>
-        <div class="video-text">Cicănești • All Seasons</div>
+    <!-- PRIMUL VIDEO -->
+    <div class="video-item">
+
+        <div class="video-container">
+
+            <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=Re9wwhwZrpI', '_blank')">
+                <img src="cicanesti.jpg">
+                <div class="play-btn">▶</div>
+            </div>
+
+        </div>
+
+        <div class="description">
+            <p>
+                Discover Cicănești through all seasons in this cinematic aerial journey.
+            </p>
+
+            <p>
+                A peaceful corner of Romania where nature, tradition, and time flow differently.
+            </p>
+
+            <p>
+                <a href="https://www.youtube.com/watch?v=i9PctIHzzic" target="_blank">
+                    Watch full video on YouTube
+                </a>
+            </p>
+        </div>
+
     </div>
 
-</div>
 
-<!-- DESCRIERE -->
-<div class="description">
-    <p>
-        Discover Cicănești through all seasons in this cinematic aerial journey.
-    </p>
+    <!-- AL DOILEA VIDEO -->
+    <div class="video-item">
 
-    <p>
-        A peaceful corner of Romania where nature, tradition, and time flow differently.
-    </p>
+        <div class="video-container">
 
-    <p>
-        <a href="https://www.youtube.com/watch?v=i9PctIHzzic" target="_blank">
-            Watch full video on YouTube
-        </a>
-    </p>
-</div>
+            <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=bkSD4-agyFs', '_blank')">
+                <img src="iordania-israel.jpg">
+                <div class="play-btn">▶</div>
+            </div>
 
-<!-- AL DOILEA VIDEO -->
-<div class="video-container">
+        </div>
 
-    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=bkSD4-agyFs', '_blank')">
-        <img src="iordania-israel.jpg">
-        <div class="play-btn">▶</div>
-        <div class="video-text">Jordan & Israel</div>
+        <div class="description">
+            <p>
+                Discover the timeless landscapes of Jordan and Israel through a cinematic journey.
+            </p>
+
+            <p>
+                Ancient places, breathtaking landscapes, and the traces of thousands of years of history.
+            </p>
+
+            <p>
+                <a href="https://www.youtube.com/watch?v=bkSD4-agyFs" target="_blank">
+                    Watch full video on YouTube
+                </a>
+            </p>
+        </div>
+
     </div>
 
-</div>
-
-<!-- DESCRIERE AL DOILEA VIDEO -->
-<div class="description">
-    <p>
-        Discover the timeless landscapes of Jordan and Israel through a cinematic journey.
-    </p>
-
-    <p>
-        Ancient places, breathtaking landscapes, and the traces of thousands of years of history.
-    </p>
-
-    <p>
-        <a href="https://www.youtube.com/watch?v=bkSD4-agyFs" target="_blank">
-            Watch full video on YouTube
-        </a>
-    </p>
 </div>
 
 <script>
